@@ -100,7 +100,7 @@ h1, h2, h3, h4 {
   transition: var(--transition);
 }
 
-/* ==================== HERO SECTION FIXED ==================== */
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -112,7 +112,7 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
-/* Background Image Container */
+
 .hero-background {
   position: absolute;
   top: 0;
@@ -122,7 +122,6 @@ h1, h2, h3, h4 {
   z-index: 0;
 }
 
-/* Background Image - Made more prominent */
 .hero-background::before {
   content: '';
   position: absolute;
@@ -130,10 +129,10 @@ h1, h2, h3, h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('images/background.jpg'); /* Check this path! */
+  background-image: url('images/Background.jpg'); 
   background-size: 100% 100%;
-  background-position: center center; /* Centered */
-  background-attachment: fixed; /* Parallax effect */
+  background-position: center center; 
+  background-attachment: fixed; 
   background-repeat: no-repeat;
   animation: zoomEffect 20s infinite alternate;
 }
@@ -154,21 +153,16 @@ h1, h2, h3, h4 {
 
 
 
-/* Overlay on top of background image */
-
-
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* Reduced opacity to 0.4 (was 0.85) to make image more visible */
   background: linear-gradient(135deg, rgba(44, 62, 80, 0.4) 0%, rgba(52, 73, 94, 0.4) 100%);
   z-index: 1;
 }
 
-/* Main content container */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -192,7 +186,7 @@ h1, h2, h3, h4 {
   font-size: 3.5rem;
   margin-bottom: 20px;
   color: var(--white);
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Added shadow for better readability */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); 
 }
 .scroll-indicator {
   position: absolute;
@@ -309,22 +303,6 @@ h1, h2, h3, h4 {
   object-fit: cover;
 }
 
-/* ==================== DEBUG HELP ==================== */
-/* Add this temporary debug to see if background is loading */
-.hero-background::after {
-  content: 'DEBUG: Checking background image...';
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  color: red;
-  font-weight: bold;
-  background: white;
-  padding: 5px;
-  z-index: 10000;
-  display: none; /* Set to 'block' to debug */
-}
-
-/* Media query for responsive background */
 @media (max-width: 768px) {
   .hero-background::before {
     background-attachment: scroll;
@@ -335,15 +313,12 @@ h1, h2, h3, h4 {
     padding-top: 70px;
   }
 }
-
-/* For smaller screens where background might not load */
 @media (max-width: 480px) {
   .hero-background::before {
     background: linear-gradient(135deg, var(--bg-dark) 0%, #34495e 100%);
   }
 }
 
-/* Sections Common */
 section {
   padding: 100px 0;
 }
@@ -949,4 +924,5 @@ section {
       width: 250px;
       height: 250px;
   }
+
 }
